@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739568702
+::res://::1739571903
 icon.svg::CompressedTexture2D::4184911763635850817::1715740274::1739491759::1::::<><>::
 README.md::TextFile::-1::1739491440::0::1::::<><>::
 ::res://Assets/::1739492177
@@ -990,9 +990,11 @@ T_fl81_vfx.png::CompressedTexture2D::5457362402535779219::1715740274::1739491759
 T_PerlinNoise_Tiled.png::CompressedTexture2D::2086424703207963281::1715740274::1739491759::1::::<><>::
 T_VFX_Glo31.png::CompressedTexture2D::7830419815024569611::1715740274::1739491759::1::::<><>::
 T_VFX_Level_UP4.png::CompressedTexture2D::9046468556506278145::1715740274::1739491759::1::::<><>::
-::res://Scenes/::1739492095
-::res://Scenes/Levels/::1739568691
-Level1.tscn::PackedScene::2937416720377963430::1739568691::0::1::::<><>::uid://c3stnl1idv2lh::::res://Scenes/Levels/library.tres
-library.tres::MeshLibrary::6776465245297627073::1739494214::0::1::::<><>::uid://426bnrrm8fgf::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_dungeon_texture.png<>uid://wnpbvpg5nmnk::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_rocks_dungeon_texture.png<>uid://dqw7h40jiff8b::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_arched_dungeon_texture.png<>uid://cyovvol1okvrc::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_doorway_dungeon_texture.png<>uid://yvwncjy4pru0::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_corner_dungeon_texture.png<>uid://cega3f4646can::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stairs_walled_dungeon_texture.png
+::res://Scenes/::1739571392
+::res://Scenes/Levels/::1739571896
+level1.tscn::PackedScene::2937416720377963430::1739568864::0::1::::<><>::uid://c3stnl1idv2lh::::res://Scenes/Levels/library.tres
+library.tres::MeshLibrary::6776465245297627073::1739568718::0::1::::<><>::uid://426bnrrm8fgf::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_dungeon_texture.png<>uid://wnpbvpg5nmnk::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_rocks_dungeon_texture.png<>uid://dqw7h40jiff8b::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_arched_dungeon_texture.png<>uid://cyovvol1okvrc::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_doorway_dungeon_texture.png<>uid://yvwncjy4pru0::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_corner_dungeon_texture.png<>uid://cega3f4646can::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stairs_walled_dungeon_texture.png
 mesh_library.tscn::PackedScene::6768474856218858784::1739568509::0::1::::<><>::uid://426bnrrm8fgf::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_dungeon_texture.png<>uid://wnpbvpg5nmnk::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_rocks_dungeon_texture.png<>uid://dqw7h40jiff8b::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_arched_dungeon_texture.png<>uid://cyovvol1okvrc::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_doorway_dungeon_texture.png<>uid://yvwncjy4pru0::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_corner_dungeon_texture.png<>uid://cega3f4646can::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stairs_walled_dungeon_texture.png
+::res://Scenes/Player/::1739571903
+layer.tscn::PackedScene::4933970393939516188::1739571755::0::1::::<><>::uid://bm18of170jk5t::::res://Assets/KayKit_Adventurers_1.0_FREE/KayKit_Adventurers_1.0_FREE/Characters/gltf/Knight_knight_texture.png
 ::res://Scripts/::1739492103

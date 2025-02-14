@@ -1,2 +1,5 @@
 res://Scenes/Levels/Level1.tscn
 res://Scenes/Levels/library.tres
+res://Scenes/Player/player.tscn
+res://Scenes/Player/Player.tscn
+res://Scenes/Levels/level1.tscn

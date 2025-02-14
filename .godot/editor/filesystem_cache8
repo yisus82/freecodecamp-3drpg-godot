@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739491759
+::res://::1739492193
 icon.svg::CompressedTexture2D::4184911763635850817::1715740274::1739491759::1::::<><>::
 README.md::TextFile::-1::1739491440::0::1::::<><>::
-::res://Assets/::1739491759
-default.tres::Theme::7909809566682464911::1715740274::0::1::::<><>::uid://cjid80mokonss::::res://Assets/ui_big_pieces.png<>uid://brv4t28hykh2f::::res://Assets/joystix monospace.otf
+::res://Assets/::1739492177
+default.tres::Theme::7909809566682464911::1739492177::0::1::::<><>::uid://cjid80mokonss::::res://Assets/ui_big_pieces.png<>uid://brv4t28hykh2f::::res://Assets/joystix monospace.otf
 joystix monospace.otf::FontFile::3624779150708849063::1715740274::1739491758::1::::<><>::
 ui_big_pieces.png::CompressedTexture2D::5421298396609564538::1715740274::1739491759::1::::<><>::
 ::res://Assets/16x16 RPG Item Pack/::1739491761
@@ -178,12 +178,12 @@ barbarian_texture.png::CompressedTexture2D::9004395727123717291::1715740274::173
 knight_texture.png::CompressedTexture2D::6434600136953107444::1715740274::1739491760::1::::<><>::
 mage_texture.png::CompressedTexture2D::813322832398017860::1715740274::1739491760::1::::<><>::
 rogue_texture.png::CompressedTexture2D::1598757300510760212::1715740274::1739491760::1::::<><>::
-::res://Assets/KayKit_DungeonRemastered_1.0_FREE/::1715740274
-::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/::1739491760
+::res://Assets/KayKit_DungeonRemastered_1.0_FREE/::1739493064
+::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/::1739493064
 contents.png::CompressedTexture2D::3848803788569731186::1715740274::1739491760::1::::<><>::
 License.txt::TextFile::-1::1715740274::0::1::::<><>::
-::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/::1715740274
-::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/::1739491807
+::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/::1739493064
+::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/::1739493067
 banner_blue.gltf.glb::PackedScene::6729396359313997575::1715740274::1739491770::1::::<><>::uid://5v0qa7jq8n4n::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/banner_blue_dungeon_texture.png
 banner_blue_dungeon_texture.png::CompressedTexture2D::2150563789363221315::1715740274::1739491760::1::::<><>::
 banner_brown.gltf.glb::PackedScene::2988650956733132696::1715740274::1739491775::1::::<><>::uid://42dqyxg1j3xx::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/banner_brown_dungeon_texture.png
@@ -390,7 +390,7 @@ floor_tile_grate_open.gltf.glb::PackedScene::8667093923144798649::1715740274::17
 floor_tile_grate_open_dungeon_texture.png::CompressedTexture2D::1064495176384836185::1715740274::1739491807::1::::<><>::
 floor_tile_large.gltf.glb::PackedScene::7245239261416244915::1715740274::1739491778::1::::<><>::uid://426bnrrm8fgf::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_dungeon_texture.png
 floor_tile_large_dungeon_texture.png::CompressedTexture2D::2093099387287186573::1715740274::1739491758::1::::<><>::
-floor_tile_large_rocks.gltf.glb::PackedScene::6125581660529500670::1715740274::1739491779::1::::<><>::uid://wnpbvpg5nmnk::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_rocks_dungeon_texture.png
+floor_tile_large_rocks.gltf.glb::PackedScene::3577577317311171144::1739493030::1739493095::1::::<><>::uid://wnpbvpg5nmnk::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_rocks_dungeon_texture.png
 floor_tile_large_rocks_dungeon_texture.png::CompressedTexture2D::1571905138000538556::1715740274::1739491758::1::::<><>::
 floor_tile_small.gltf.glb::PackedScene::8190879335899036828::1715740274::1739491779::1::::<><>::uid://n04vyintm233::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_small_dungeon_texture.png
 floor_tile_small_broken_A.gltf.glb::PackedScene::8769134727778959445::1715740274::1739491779::1::::<><>::uid://cgyq0nrmdxubb::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_small_broken_A_dungeon_texture.png
@@ -990,3 +990,8 @@ T_fl81_vfx.png::CompressedTexture2D::5457362402535779219::1715740274::1739491759
 T_PerlinNoise_Tiled.png::CompressedTexture2D::2086424703207963281::1715740274::1739491759::1::::<><>::
 T_VFX_Glo31.png::CompressedTexture2D::7830419815024569611::1715740274::1739491759::1::::<><>::
 T_VFX_Level_UP4.png::CompressedTexture2D::9046468556506278145::1715740274::1739491759::1::::<><>::
+::res://Scenes/::1739492095
+::res://Scenes/Levels/::1739492652
+Level1.tscn::PackedScene::2937416720377963430::1739492276::0::1::::<><>::
+mesh_library.tscn::PackedScene::6768474856218858784::1739492652::0::1::::<><>::uid://426bnrrm8fgf::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_dungeon_texture.png
+::res://Scripts/::1739492103

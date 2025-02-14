@@ -1,7 +1,9 @@
+Node3D
+Camera3D
+SpringArm3D
 CollisionShape3D
 CharacterBody3D
 DirectionalLight3D
 WorldEnvironment
-Camera3D
 StaticBody3D
 GridMap

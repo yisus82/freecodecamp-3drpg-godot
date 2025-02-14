@@ -3,3 +3,5 @@ res://Scenes/Levels/library.tres
 res://Scenes/Player/player.tscn
 res://Scenes/Player/Player.tscn
 res://Scenes/Levels/level1.tscn
+res://Scripts/Player/player.gd
+res://Scripts/Player/camera_controller.gd

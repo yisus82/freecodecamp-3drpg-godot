@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bh353a2ioskrm"]
+[gd_scene load_steps=5 format=3 uid="uid://bh353a2ioskrm"]
 
 [ext_resource type="MeshLibrary" uid="uid://c3stnl1idv2lh" path="res://Scenes/Levels/library.tres" id="1_y1aak"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vrecm"]
+
+[sub_resource type="Sky" id="Sky_o8cdd"]
+sky_material = SubResource("ProceduralSkyMaterial_vrecm")
+
+[sub_resource type="Environment" id="Environment_xyhu7"]
+background_mode = 1
+background_color = Color(0.392157, 0.392157, 0.392157, 1)
+sky = SubResource("Sky_o8cdd")
+fog_enabled = true
+fog_light_energy = 0.1
+fog_density = 0.002
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
 
 [node name="Level1" type="Node3D"]
 
@@ -11,4 +26,7 @@ data = {
 }
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.9113, 9.72037)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 5, 10)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xyhu7")

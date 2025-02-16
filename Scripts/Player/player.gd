@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
 
-@onready var cam_root_h = get_node("CamRoot/H")
-@onready var player_mesh = get_node("Knight")
+@onready var cam_root_h: Node = get_node("CamRoot/H")
+@onready var player_mesh: Node = get_node("Knight")
+@onready var animation_tree: Node = get_node("AnimationTree")
+@onready var playback: Variant = animation_tree.get("parameters/playback")
 
 @export var gravity: float = 9.8
 @export var jump_force: int = 9
@@ -44,9 +46,16 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("aim"):
 		direction = cam_root_h.global_transform.basis.z
 
+func attack1() -> void:
+	if idle_node_name in playback.get_current_node() or walk_node_name in playback.get_current_node() or run_node_name in playback.get_current_node():
+		if Input.is_action_pressed("attack"):
+			if !is_attacking:
+				playback.travel(attack1_node_name)
+
 func _physics_process(delta: float) -> void:
 	var on_floor = is_on_floor()
 	if !is_dying:
+		attack1()
 		if !on_floor:
 			vertical_velocity += Vector3.DOWN * gravity * 2 * delta
 		else:
@@ -56,18 +65,22 @@ func _physics_process(delta: float) -> void:
 		movement_speed = 0
 		angular_acceleration = 10
 		acceleration = 15
+		if attack1_node_name in playback.get_current_node():
+			is_attacking = true
+		else:
+			is_attacking = false
 		var h_rot = cam_root_h.global_transform.basis.get_euler().y
 		if Input.is_action_pressed("forward") or Input.is_action_pressed("backward") or Input.is_action_pressed("left") or Input.is_action_pressed("right"):
 			direction = Vector3(Input.get_action_strength("left") - Input.get_action_strength("right"), 
 								0, 
 								Input.get_action_strength("forward") - Input.get_action_strength("backward"))
 			direction = direction.rotated(Vector3.UP, h_rot).normalized()
-			if Input.is_action_pressed("jump") and is_walking:
+			if Input.is_action_pressed("sprint") and is_walking:
 				movement_speed = run_speed
 				is_running = true
 			else:
 				movement_speed = walk_speed
-				is_running = false
+				is_walking = true
 		else:
 			is_walking = false
 			is_running = false
@@ -83,3 +96,10 @@ func _physics_process(delta: float) -> void:
 		velocity.y = vertical_velocity.y
 		velocity.z = horizontal_velocity.z + vertical_velocity.z
 		move_and_slide()
+	animation_tree["parameters/conditions/is_on_floor"] = on_floor
+	animation_tree["parameters/conditions/is_in_air"] = !on_floor
+	animation_tree["parameters/conditions/is_walking"] = is_walking
+	animation_tree["parameters/conditions/is_not_walking"] = !is_walking
+	animation_tree["parameters/conditions/is_running"] = is_running
+	animation_tree["parameters/conditions/is_not_running"] = !is_running
+	animation_tree["parameters/conditions/is_dying"] = is_dying

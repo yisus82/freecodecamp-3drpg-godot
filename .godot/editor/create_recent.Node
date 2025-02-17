@@ -1,6 +1,9 @@
+BoneAttachment3D
 CollisionShape3D
-CharacterBody3D
+Area3D
 AnimationTree
+Node
+CharacterBody3D
 Node3D
 Camera3D
 SpringArm3D

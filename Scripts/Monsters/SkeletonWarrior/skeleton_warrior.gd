@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if player:
-		direction = (player.global_transform.origin - self.global_transform.origin).normalized()
+		direction = (player.global_transform.origin - global_transform.origin).normalized()
 	move_and_slide()
 
 func _on_chase_player_detection_body_entered(body: Node3D) -> void:
@@ -42,7 +42,7 @@ func _on_attack_player_detection_body_exited(body: Node3D) -> void:
 		state_controller.change_state("Run")
 
 func die() -> void:
-	self.queue_free()
+	queue_free()
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if "Awake" in anim_name:
@@ -52,3 +52,17 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			state_controller.change_state("Attack")
 	elif "Death" in anim_name:
 		die()
+
+func hit(amount: int) -> void:
+	if !just_hit:
+		just_hit = true
+		get_node("HitTimer").start()
+		health -= amount
+		if health <= 0:
+			state_controller.change_state("Death")
+		else:
+			var tween = get_tree().create_tween()
+			tween.tween_property(self, "global_position", global_position - (direction / 1.5), 0.2)
+
+func _on_hit_timer_timeout() -> void:
+	just_hit = false

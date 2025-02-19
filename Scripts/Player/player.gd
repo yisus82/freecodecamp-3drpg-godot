@@ -10,6 +10,7 @@ extends CharacterBody3D
 @export var jump_force: int = 9
 @export var walk_speed: int = 3
 @export var run_speed: int = 10
+@export var damage: int = 2
 
 # animation node names
 var idle_node_name: String = "Idle"
@@ -103,3 +104,7 @@ func _physics_process(delta: float) -> void:
 	animation_tree["parameters/conditions/is_running"] = is_running
 	animation_tree["parameters/conditions/is_not_running"] = !is_running
 	animation_tree["parameters/conditions/is_dying"] = is_dying
+
+func _on_damage_detector_body_entered(body: Node3D) -> void:
+	if body.is_in_group("monster") and is_attacking:
+		body.hit(damage)

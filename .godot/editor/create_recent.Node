@@ -1,6 +1,7 @@
-BoneAttachment3D
+Timer
 CollisionShape3D
 Area3D
+BoneAttachment3D
 AnimationTree
 Node
 CharacterBody3D

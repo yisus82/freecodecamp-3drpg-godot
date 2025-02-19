@@ -1,14 +1,5 @@
-res://Scenes/Levels/Level1.tscn
-res://Scenes/Levels/library.tres
 res://Scenes/Player/player.tscn
-res://Scenes/Player/Player.tscn
-res://Scenes/Levels/level1.tscn
-res://Scripts/Player/player.gd
-res://Scripts/Player/camera_controller.gd
-res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn
+res://Scenes/Levels/library.tres
 res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd
-res://Scripts/Monsters/SkeletonWarrior/state_machine.gd
-res://Scripts/Monsters/SkeletonWarrior/idle_state.gd
-res://Scripts/Monsters/SkeletonWarrior/attack_state.gd
-res://Scripts/Monsters/SkeletonWarrior/death_state.gd
-res://Scripts/Monsters/SkeletonWarrior/run_state.gd
+res://Scenes/Levels/level1.tscn
+res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn

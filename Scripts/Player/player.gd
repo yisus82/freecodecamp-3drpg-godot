@@ -10,6 +10,7 @@ extends CharacterBody3D
 @export var jump_force: int = 9
 @export var walk_speed: int = 3
 @export var run_speed: int = 10
+@export var health: int = 5
 @export var damage: int = 2
 
 # animation node names
@@ -104,7 +105,29 @@ func _physics_process(delta: float) -> void:
 	animation_tree["parameters/conditions/is_running"] = is_running
 	animation_tree["parameters/conditions/is_not_running"] = !is_running
 	animation_tree["parameters/conditions/is_dying"] = is_dying
+	
+func die() -> void:
+	queue_free()
+
+func hit(amount: int) -> void:
+	if !just_hit:
+		just_hit = true
+		get_node("HitTimer").start()
+		health -= amount
+		if health <= 0:
+			is_dying = true
+			playback.travel(death_node_name)
+		else:
+			var tween = get_tree().create_tween()
+			tween.tween_property(self, "global_position", global_position - (direction / 1.5), 0.2)
 
 func _on_damage_detector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("monster") and is_attacking:
 		body.hit(damage)
+
+func _on_hit_timer_timeout() -> void:
+	just_hit = false
+
+func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
+	if "Death" in anim_name:
+		die()

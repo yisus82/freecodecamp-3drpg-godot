@@ -3,3 +3,4 @@ res://Scenes/Levels/library.tres
 res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd
 res://Scenes/Levels/level1.tscn
 res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn
+res://Scripts/Player/player.gd

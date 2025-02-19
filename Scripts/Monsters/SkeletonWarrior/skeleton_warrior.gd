@@ -21,7 +21,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	if player:
+	if is_instance_valid(player):
 		direction = (player.global_transform.origin - global_transform.origin).normalized()
 	move_and_slide()
 
@@ -59,6 +59,7 @@ func hit(amount: int) -> void:
 		get_node("HitTimer").start()
 		health -= amount
 		if health <= 0:
+			is_dying = true
 			state_controller.change_state("Death")
 		else:
 			var tween = get_tree().create_tween()
@@ -66,3 +67,7 @@ func hit(amount: int) -> void:
 
 func _on_hit_timer_timeout() -> void:
 	just_hit = false
+
+func _on_damage_detector_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player") and is_attacking:
+		body.hit(damage)

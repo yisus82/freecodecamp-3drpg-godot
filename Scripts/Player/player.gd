@@ -107,7 +107,8 @@ func _physics_process(delta: float) -> void:
 	animation_tree["parameters/conditions/is_dying"] = is_dying
 	
 func die() -> void:
-	queue_free()
+	await get_tree().create_timer(1).timeout
+	get_node("../GameOverOverlay").game_over()
 
 func hit(amount: int) -> void:
 	if !just_hit:

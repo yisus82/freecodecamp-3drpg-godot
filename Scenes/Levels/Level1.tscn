@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bh353a2ioskrm"]
+[gd_scene load_steps=8 format=3 uid="uid://bh353a2ioskrm"]
 
 [ext_resource type="MeshLibrary" uid="uid://c3stnl1idv2lh" path="res://Scenes/Levels/library.tres" id="1_n5qkr"]
 [ext_resource type="PackedScene" uid="uid://cckb1h5cc6kxo" path="res://Scenes/Player/player.tscn" id="2_c406j"]
 [ext_resource type="PackedScene" uid="uid://bfqc4ojpqubak" path="res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn" id="3_rfrmb"]
+[ext_resource type="PackedScene" uid="uid://f4115ubn0p6r" path="res://Scenes/GUI/game_over_overlay.tscn" id="4_cv2gw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vrecm"]
 
@@ -36,3 +37,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12611, 0)
 [node name="SkeletonWarrior" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_rfrmb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10)
 player = NodePath("../Player")
+
+[node name="GameOverOverlay" parent="." instance=ExtResource("4_cv2gw")]

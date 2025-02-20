@@ -1,6 +1,7 @@
-res://Scenes/Player/player.tscn
+res://Assets/default.tres
 res://Scenes/Levels/library.tres
-res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd
 res://Scenes/Levels/level1.tscn
-res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn
+res://Scenes/GUI/gui.tscn
+res://Scenes/GUI/game_over_overlay.tscn
+res://Scripts/GUI/game_over_overlay.gd
 res://Scripts/Player/player.gd

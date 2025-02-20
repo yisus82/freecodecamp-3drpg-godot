@@ -1,3 +1,7 @@
+Button
+Label
+Panel
+CanvasLayer
 Timer
 CollisionShape3D
 Area3D
@@ -9,6 +13,3 @@ Node3D
 Camera3D
 SpringArm3D
 DirectionalLight3D
-WorldEnvironment
-StaticBody3D
-GridMap

@@ -1,6 +1,9 @@
 Button
-Label
+VBoxContainer
+Control
+ProgressBar
 Panel
+Label
 CanvasLayer
 Timer
 CollisionShape3D
@@ -9,7 +12,3 @@ BoneAttachment3D
 AnimationTree
 Node
 CharacterBody3D
-Node3D
-Camera3D
-SpringArm3D
-DirectionalLight3D

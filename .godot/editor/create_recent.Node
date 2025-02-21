@@ -1,3 +1,5 @@
+InventorySlot
+GridContainer
 Button
 VBoxContainer
 Control
@@ -11,4 +13,3 @@ Area3D
 BoneAttachment3D
 AnimationTree
 Node
-CharacterBody3D

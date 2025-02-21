@@ -1,5 +1,7 @@
-res://Scripts/GUI
+res://Scenes/GUI/Inventory/Resources/
+res://Scripts/GUI/Inventory
 res://Scenes/GUI
+res://Scripts/GUI
 res://Assets
 res://Scripts/Monsters/SkeletonWarrior
 res://Scenes/Monsters/SkeletonWarrior

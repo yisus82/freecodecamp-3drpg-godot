@@ -62,7 +62,7 @@ func hit(amount: int) -> void:
 			is_dying = true
 			state_controller.change_state("Death")
 		else:
-			var tween = get_tree().create_tween()
+			var tween := get_tree().create_tween()
 			tween.tween_property(self, "global_position", global_position - (direction / 1.5), 0.2)
 
 func _on_hit_timer_timeout() -> void:

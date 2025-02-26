@@ -5,9 +5,9 @@ extends PanelContainer
 @export var type: InventoryItemData.InventoryItemType
 
 
-func init(type: InventoryItemData.InventoryItemType, custom_minimum_size: Vector2) -> void:
-	self.type = type
-	self.custom_minimum_size = custom_minimum_size
+func init(slot_type: InventoryItemData.InventoryItemType, minimum_size: Vector2) -> void:
+	type = slot_type
+	custom_minimum_size = minimum_size
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 	if data is InventoryItem:
@@ -29,8 +29,8 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 		get_child(0).reparent(data.get_parent())
 	data.reparent(self)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	pass
 
-func _gui_input(event: InputEvent) -> void:
+func _gui_input(_event: InputEvent) -> void:
 	pass

@@ -13,11 +13,12 @@ func _ready() -> void:
 		expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		texture = data.texture
-		tooltip_text = "Name: %s\nDescription: %s\nStats: %s Damage, %s Defense, %s Health" % [data.item_name, data.description, data.damage, data.defense, data.health]
+		tooltip_text = "Name: %s\nDescription: %s\nStats: %s Damage, %s Defense, %s Health" % [data.name, data.description, data.damage, data.defense, data.health]
 		if data.stackable:
 			var label := Label.new()
 			label.text = str(data.count)
-			label.position = Vector2(24, 16)
+			var parent_size: Vector2 = get_parent().size
+			label.position = Vector2(int(parent_size[0] * 0.8), int(parent_size[1] * 0.1))
 			add_child(label)
 
 func make_drag_preview(at_position: Vector2) -> Control:

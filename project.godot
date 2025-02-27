@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Levels/level1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://Scripts/Global/game_manager.gd"
+
 [display]
 
 window/size/mode=2

@@ -8,3 +8,5 @@ res://Scripts/GUI/Inventory/inventory_item.gd
 res://Scripts/GUI/Inventory/inventory_main.gd
 res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd
 res://Scripts/Monsters/SkeletonWarrior/state_machine.gd
+res://Scripts/Global/game_manager.gd
+res://Scripts/GUI/gui.gd

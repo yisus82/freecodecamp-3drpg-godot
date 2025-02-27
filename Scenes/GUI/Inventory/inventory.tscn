@@ -1,20 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://clkst6gjnpotr"]
+[gd_scene load_steps=2 format=3 uid="uid://clkst6gjnpotr"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/Inventory/inventory_main.gd" id="1_m8rpq"]
-[ext_resource type="Script" path="res://Scripts/GUI/Inventory/inventory_slot.gd" id="2_iu6id"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1152.0
+offset_bottom = 640.0
 script = ExtResource("1_m8rpq")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="Grid" type="GridContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="InventorySlot" type="PanelContainer" parent="GridContainer"]
-layout_mode = 2
-script = ExtResource("2_iu6id")
+offset_right = 1152.0
+offset_bottom = 640.0
+columns = 6

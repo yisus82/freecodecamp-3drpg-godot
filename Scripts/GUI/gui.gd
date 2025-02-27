@@ -6,8 +6,7 @@ var is_paused: bool
 
 func _ready() -> void:
 	get_node("Container").hide()
-	get_node("Container/Inventory").hide()
-	get_node("Container/Profile").hide()
+	_on_inventory_button_pressed()
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):

@@ -3,14 +3,14 @@ extends Node
 
 @onready var grid: GridContainer = get_node("Grid")
 
-@export var inventory_size = 24
+@export var inventory_size: int = 24
 
 
 func _ready() -> void:
-	var rows: int = inventory_size / grid.columns
+	var rows: int = int(ceil(inventory_size * 1.0 / grid.columns))
 	var parent_size: Vector2 = grid.get_parent().size
-	var max_width: float = grid.get_parent().size[0] / grid.columns
-	var max_height: float = grid.get_parent().size[1] / rows
+	var max_width: float = parent_size[0] / grid.columns
+	var max_height: float = parent_size[1] / rows
 	var max_size: float = min(max_width, max_height)
 	var slot_size: int = int(max_size)
 	for i in range(inventory_size):
@@ -18,6 +18,7 @@ func _ready() -> void:
 		slot.init(InventoryItemData.InventoryItemType.MAIN, Vector2(slot_size, slot_size))
 		grid.add_child(slot)
 	add_item("Long Sword")
+	add_item("Small Potion")
 	add_item("Small Potion")
 
 func add_item(item_name: String) -> void:

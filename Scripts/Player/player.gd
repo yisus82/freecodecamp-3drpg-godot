@@ -114,7 +114,7 @@ func hit(amount: int) -> void:
 	if !just_hit:
 		just_hit = true
 		get_node("HitTimer").start()
-		health -= amount
+		health = GameManager.damage_player(amount)
 		if health <= 0:
 			is_dying = true
 			playback.travel(death_node_name)

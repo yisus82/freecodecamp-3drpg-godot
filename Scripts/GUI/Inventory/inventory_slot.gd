@@ -32,5 +32,13 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 func _physics_process(_delta: float) -> void:
 	pass
 
-func _gui_input(_event: InputEvent) -> void:
-	pass
+func _gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == 2 and event.button_mask == 0:
+			if get_child_count() > 0:
+				if (get_child(0).data.type == InventoryItemData.InventoryItemType.MISC):
+					if GameManager.heal_player(get_child(0).data.health):
+						get_child(0).data.count -= 1
+						get_child(0).get_child(0).text = str(get_child(0).data.count)
+						if get_child(0).data.count <= 0:
+							get_child(0).queue_free()

@@ -10,3 +10,5 @@ res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd
 res://Scripts/Monsters/SkeletonWarrior/state_machine.gd
 res://Scripts/Global/game_manager.gd
 res://Scripts/GUI/gui.gd
+res://Scripts/Player/player.gd
+res://Scripts/GUI/game_over_overlay.gd

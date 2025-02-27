@@ -12,3 +12,4 @@ func game_over() -> void:
 func _on_retry_button_pressed() -> void:
 	get_tree().paused = false
 	get_tree().reload_current_scene()
+	GameManager.reset_values()

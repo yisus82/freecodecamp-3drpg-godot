@@ -29,10 +29,10 @@ offset_right = 1056.0
 offset_bottom = 576.0
 
 [node name="Inventory" parent="Container" instance=ExtResource("2_8caqf")]
-offset_left = 384.0
-offset_top = 128.0
+offset_left = 152.0
+offset_top = 160.0
 offset_right = 1024.0
-offset_bottom = 512.0
+offset_bottom = 544.0
 
 [node name="Profile" type="Control" parent="Container"]
 layout_mode = 3

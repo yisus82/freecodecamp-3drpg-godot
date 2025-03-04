@@ -18,6 +18,7 @@ func _ready() -> void:
 		slot.init(InventoryItemData.InventoryItemType.MAIN, Vector2(slot_size, slot_size))
 		grid.add_child(slot)
 	add_item("Long Sword")
+	add_item("Iron Sword")
 	add_item("Small Potion")
 	add_item("Small Potion")
 

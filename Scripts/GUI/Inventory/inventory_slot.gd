@@ -30,7 +30,17 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	data.reparent(self)
 
 func _physics_process(_delta: float) -> void:
-	pass
+	match type:
+		InventoryItemData.InventoryItemType.WEAPON:
+			if get_child_count() > 0:
+				GameManager.weapon_equipped = get_child(0).data
+			else:
+				GameManager.weapon_equipped = GameManager.default_items[type]
+		InventoryItemData.InventoryItemType.BODY:
+			if get_child_count() > 0:
+				GameManager.body_equipped = get_child(0).data
+			else:
+				GameManager.body_equipped = GameManager.default_items[type]
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

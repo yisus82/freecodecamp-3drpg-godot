@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740125934
+::res://::1741200923
 icon.svg::CompressedTexture2D::4184911763635850817::1715740274::1739491759::1::::<><>::
 README.md::TextFile::-1::1739491440::0::1::::<><>::
-::res://Assets/::1740229231
-default.tres::Theme::7909809566682464911::1740229231::0::1::::<><>::uid://cjid80mokonss::::res://Assets/ui_big_pieces.png<>uid://brv4t28hykh2f::::res://Assets/joystix monospace.otf
+::res://Assets/::1741340495
+default.tres::Theme::7909809566682464911::1741340495::0::1::::<><>::uid://cjid80mokonss::::res://Assets/ui_big_pieces.png<>uid://brv4t28hykh2f::::res://Assets/joystix monospace.otf
 joystix monospace.otf::FontFile::3624779150708849063::1715740274::1739491758::1::::<><>::
 ui_big_pieces.png::CompressedTexture2D::5421298396609564538::1715740274::1739491759::1::::<><>::
 ::res://Assets/16x16 RPG Item Pack/::1739491761
@@ -991,36 +991,41 @@ T_PerlinNoise_Tiled.png::CompressedTexture2D::2086424703207963281::1715740274::1
 T_VFX_Glo31.png::CompressedTexture2D::7830419815024569611::1715740274::1739491759::1::::<><>::
 T_VFX_Level_UP4.png::CompressedTexture2D::9046468556506278145::1715740274::1739491759::1::::<><>::
 ::res://Scenes/::1739967770
-::res://Scenes/GUI/::1740557210
+::res://Scenes/GUI/::1741341553
 game_over_overlay.tscn::PackedScene::412437852171752227::1740040683::0::1::::<><>::res://Scripts/GUI/game_over_overlay.gd
-gui.tscn::PackedScene::2656266927765587637::1740557210::0::1::::<><>::res://Scripts/GUI/gui.gd<>uid://clkst6gjnpotr::::res://Scenes/GUI/Inventory/inventory.tscn
-::res://Scenes/GUI/Inventory/::1740557661
-inventory.tscn::PackedScene::5566690898818724023::1740557661::0::1::::<><>::res://Scripts/GUI/Inventory/inventory_main.gd<>res://Scripts/GUI/Inventory/inventory_slot.gd
+gui.tscn::PackedScene::2656266927765587637::1741341553::0::1::::<><>::res://Scripts/GUI/gui.gd<>uid://clkst6gjnpotr::::res://Scenes/GUI/Inventory/inventory.tscn<>uid://c72fd4jvxq7g2::::res://Scenes/GUI/profile.tscn
+profile.tscn::PackedScene::7074933043574338999::1741341553::0::1::::<><>::res://Scripts/GUI/profile.gd
+::res://Scenes/GUI/Inventory/::1741341553
+inventory.tscn::PackedScene::5566690898818724023::1741341636::0::1::::<><>::res://Scripts/GUI/Inventory/inventory_main.gd<>res://Scripts/GUI/Inventory/inventory_slot.gd
 ::res://Scenes/GUI/Inventory/Resources/::1740125934
 iron_sword.tres::Resource/InventoryItemData::5797500579479323269::1740125500::0::1::::<><>::res://Scripts/GUI/Inventory/inventory_item_data.gd<>uid://ckfasjsi5krbd::::res://Assets/16x16 RPG Item Pack/Item__00.png
 long_sword.tres::Resource/InventoryItemData::8531686922638251104::1740125669::0::1::::<><>::res://Scripts/GUI/Inventory/inventory_item_data.gd<>uid://cp6aks3lnq0ye::::res://Assets/16x16 RPG Item Pack/Item__04.png
+iron_armor.tres::Resource/InventoryItemData::3125179814348002104::1741341665::0::1::::<><>::res://Scripts/GUI/Inventory/inventory_item_data.gd<>uid://cp6aks3lnq0ye::::res://Assets/16x16 RPG Item Pack/Item__04.png
 small_potion.tres::Resource/InventoryItemData::952125724954044287::1740125837::0::1::::<><>::res://Scripts/GUI/Inventory/inventory_item_data.gd<>uid://wcn80k5ichx::::res://Assets/16x16 RPG Item Pack/Item__28.png
 ::res://Scenes/GUI/Inventory/Resources/Default/::1740134696
 default_body_armor.tres::Resource/InventoryItemData::8198399669199408184::1740134696::0::1::::<><>::res://Scripts/GUI/Inventory/inventory_item_data.gd<>uid://bqw11syqkiqou::::res://Assets/16x16 RPG Item Pack/Item__57.png
 default_sword.tres::Resource/InventoryItemData::2548405669241813126::1740134696::0::1::::<><>::res://Scripts/GUI/Inventory/inventory_item_data.gd<>uid://dpydr1rb1oshl::::res://Assets/16x16 RPG Item Pack/Item__01.png
-::res://Scenes/Levels/::1740557210
-level1.tscn::PackedScene::2937416720377963430::1740557210::0::1::::<><>::uid://c3stnl1idv2lh::::res://Scenes/Levels/library.tres<>uid://cckb1h5cc6kxo::::res://Scenes/Player/player.tscn<>uid://bfqc4ojpqubak::::res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn<>uid://f4115ubn0p6r::::res://Scenes/GUI/game_over_overlay.tscn<>uid://bd3ylfofkux46::::res://Scenes/GUI/gui.tscn
-library.tres::MeshLibrary::6776465245297627073::1740229231::0::1::::<><>::uid://426bnrrm8fgf::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_dungeon_texture.png<>uid://wnpbvpg5nmnk::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_rocks_dungeon_texture.png<>uid://dqw7h40jiff8b::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_arched_dungeon_texture.png<>uid://cyovvol1okvrc::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_doorway_dungeon_texture.png<>uid://yvwncjy4pru0::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_corner_dungeon_texture.png<>uid://cega3f4646can::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stairs_walled_dungeon_texture.png
+::res://Scenes/Levels/::1741341553
+level1.tscn::PackedScene::2937416720377963430::1741341553::0::1::::<><>::uid://c3stnl1idv2lh::::res://Scenes/Levels/library.tres<>uid://cckb1h5cc6kxo::::res://Scenes/Player/player.tscn<>uid://bfqc4ojpqubak::::res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn<>uid://f4115ubn0p6r::::res://Scenes/GUI/game_over_overlay.tscn<>uid://bd3ylfofkux46::::res://Scenes/GUI/gui.tscn
+library.tres::MeshLibrary::6776465245297627073::1741340495::0::1::::<><>::uid://426bnrrm8fgf::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_dungeon_texture.png<>uid://wnpbvpg5nmnk::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_rocks_dungeon_texture.png<>uid://dqw7h40jiff8b::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_arched_dungeon_texture.png<>uid://cyovvol1okvrc::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_doorway_dungeon_texture.png<>uid://yvwncjy4pru0::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_corner_dungeon_texture.png<>uid://cega3f4646can::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stairs_walled_dungeon_texture.png
 mesh_library.tscn::PackedScene::6768474856218858784::1739568509::0::1::::<><>::uid://426bnrrm8fgf::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_dungeon_texture.png<>uid://wnpbvpg5nmnk::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large_rocks_dungeon_texture.png<>uid://dqw7h40jiff8b::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_arched_dungeon_texture.png<>uid://cyovvol1okvrc::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_doorway_dungeon_texture.png<>uid://yvwncjy4pru0::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_corner_dungeon_texture.png<>uid://cega3f4646can::::res://Assets/KayKit_DungeonRemastered_1.0_FREE/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stairs_walled_dungeon_texture.png
 ::res://Scenes/Monsters/::1739794375
 ::res://Scenes/Monsters/SkeletonWarrior/::1739966938
 skeleton_warrior.tscn::PackedScene::2770568917890836046::1739966938::0::1::::<><>::res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd<>uid://pf36keinuqdf::::res://Assets/KayKit_Skeletons_1.0_FREE/KayKit_Skeletons_1.0_FREE/characters/gltf/Skeleton_Warrior_skeleton_texture.png<>res://Scripts/Monsters/SkeletonWarrior/state_machine.gd<>uid://b0mg03knrhdb3::::res://Assets/KayKit_Skeletons_1.0_FREE/KayKit_Skeletons_1.0_FREE/assets/fbx/skeleton_texture.png
 ::res://Scenes/Player/::1739966938
 player.tscn::PackedScene::4933970393939516188::1739966938::0::1::::<><>::uid://bm18of170jk5t::::res://Assets/KayKit_Adventurers_1.0_FREE/KayKit_Adventurers_1.0_FREE/Characters/gltf/Knight_knight_texture.png<>res://Scripts/Player/player.gd<>res://Scripts/Player/camera_controller.gd
-::res://Scripts/::1740040103
-::res://Scripts/GUI/::1740124276
-game_over_overlay.gd::GDScript::-1::1740040679::0::1::::<>CanvasLayer<>::
-gui.gd::GDScript::-1::1740044834::0::1::::<>CanvasLayer<>::
-::res://Scripts/GUI/Inventory/::1740557661
-inventory_item.gd::GDScript::-1::1740557661::0::1::::InventoryItem<>TextureRect<>::
-inventory_item_data.gd::GDScript::-1::1740125351::0::1::::InventoryItemData<>Resource<>::
-inventory_main.gd::GDScript::-1::1740557088::0::1::::<>Node<>::
-inventory_slot.gd::GDScript::-1::1740384522::0::1::::InventorySlot<>PanelContainer<>::
+::res://Scripts/::1740566824
+::res://Scripts/Global/::1741341536
+game_manager.gd::GDScript::-1::1741341536::0::1::::<>Node<>::
+::res://Scripts/GUI/::1741341550
+game_over_overlay.gd::GDScript::-1::1740650699::0::1::::<>CanvasLayer<>::
+gui.gd::GDScript::-1::1740644549::0::1::::<>CanvasLayer<>::
+profile.gd::GDScript::-1::1741341550::0::1::::<>Control<>::
+::res://Scripts/GUI/Inventory/::1741094111
+inventory_item.gd::GDScript::-1::1740647383::0::1::::InventoryItem<>TextureRect<>::
+inventory_item_data.gd::GDScript::-1::1740657696::0::1::::InventoryItemData<>Resource<>::
+inventory_main.gd::GDScript::-1::1741341636::0::1::::<>Node<>::
+inventory_slot.gd::GDScript::-1::1741094058::0::1::::InventorySlot<>PanelContainer<>::
 ::res://Scripts/Monsters/::1739794995
 ::res://Scripts/Monsters/SkeletonWarrior/::1740557192
 attack_state.gd::GDScript::-1::1739819368::0::1::::<>Node<>::
@@ -1029,6 +1034,6 @@ idle_state.gd::GDScript::-1::1739816917::0::1::::<>Node<>::
 run_state.gd::GDScript::-1::1739819358::0::1::::<>Node<>::
 skeleton_warrior.gd::GDScript::-1::1740557148::0::1::::<>CharacterBody3D<>::
 state_machine.gd::GDScript::-1::1740557192::0::1::::<>Node<>::
-::res://Scripts/Player/::1740040436
+::res://Scripts/Player/::1740650290
 camera_controller.gd::GDScript::-1::1739712410::0::1::::<>Node3D<>::
-player.gd::GDScript::-1::1740040436::0::1::::<>CharacterBody3D<>::
+player.gd::GDScript::-1::1740650290::0::1::::<>CharacterBody3D<>::

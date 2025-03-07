@@ -19,6 +19,7 @@ func _ready() -> void:
 		grid.add_child(slot)
 	add_item("Long Sword")
 	add_item("Iron Sword")
+	add_item("Iron Armor")
 	add_item("Small Potion")
 	add_item("Small Potion")
 

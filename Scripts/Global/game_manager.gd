@@ -9,6 +9,7 @@ var default_items := {
 var items := {
 	"Iron Sword": preload("res://Scenes/GUI/Inventory/resources/iron_sword.tres"),
 	"Long Sword": preload("res://Scenes/GUI/Inventory/resources/long_sword.tres"),
+	"Iron Armor": preload("res://Scenes/GUI/Inventory/resources/iron_armor.tres"),
 	"Small Potion": preload("res://Scenes/GUI/Inventory/resources/small_potion.tres"),
 }
 
@@ -16,15 +17,28 @@ var player_health: int = 10
 var player_max_health: int = 10
 var player_damage: int = 2
 var player_defense: int = 0
-var weapon_equipped: InventoryItemData
-var body_equipped: InventoryItemData
+var weapon_equipped: InventoryItemData = default_items[InventoryItemData.InventoryItemType.WEAPON]
+var body_equipped: InventoryItemData = default_items[InventoryItemData.InventoryItemType.BODY]
 var gold: int = 100
+var current_exp: int = 0
+var exp_to_next_level: int = 100
+var player_level: int = 1
 
+
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
+func _process(_delta: float) -> void:
+	player_damage = weapon_equipped.damage + body_equipped.damage
+	player_defense = weapon_equipped.defense + body_equipped.defense
 
 func reset_values() -> void:
 	player_health = 10
 	player_damage = 2
 	player_defense = 0
+	player_level = 1
+	current_exp = 0
+	exp_to_next_level = 100
 	gold = 100
 	weapon_equipped = default_items[InventoryItemData.InventoryItemType.WEAPON]
 	body_equipped = default_items[InventoryItemData.InventoryItemType.BODY]

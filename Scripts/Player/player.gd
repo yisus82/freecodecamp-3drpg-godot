@@ -10,8 +10,6 @@ extends CharacterBody3D
 @export var jump_force: int = 9
 @export var walk_speed: int = 3
 @export var run_speed: int = 10
-@export var health: int = 5
-@export var damage: int = 2
 
 # animation node names
 var idle_node_name: String = "Idle"
@@ -112,10 +110,10 @@ func die() -> void:
 
 func hit(amount: int) -> void:
 	if !just_hit:
-		just_hit = true
-		get_node("HitTimer").start()
-		health = GameManager.damage_player(amount)
-		if health <= 0:
+		if GameManager.damage_player(amount):
+			just_hit = true
+			get_node("HitTimer").start()
+		if GameManager.player_health <= 0:
 			is_dying = true
 			playback.travel(death_node_name)
 		else:
@@ -124,7 +122,7 @@ func hit(amount: int) -> void:
 
 func _on_damage_detector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("monster") and is_attacking:
-		body.hit(damage)
+		body.hit(GameManager.player_damage)
 
 func _on_hit_timer_timeout() -> void:
 	just_hit = false

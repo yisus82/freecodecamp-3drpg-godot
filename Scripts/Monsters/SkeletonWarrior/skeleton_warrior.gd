@@ -8,7 +8,7 @@ extends CharacterBody3D
 var speed: float = 1.0
 var direction: Vector3
 var health: int = 4
-var damage: int = 2
+var damage: int = 3
 var is_awakening: bool = false
 var is_attacking: bool = false
 var is_dying: bool = false

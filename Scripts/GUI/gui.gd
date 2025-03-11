@@ -6,9 +6,12 @@ var is_paused: bool
 
 func _ready() -> void:
 	get_node("Container").hide()
+	get_node("HealthBar").max_value = GameManager.player_max_health
 	_on_inventory_button_pressed()
 
 func _physics_process(_delta: float) -> void:
+	var tween := create_tween()
+	tween.tween_property(get_node("HealthBar"), "value", GameManager.player_health, 0.2)
 	if Input.is_action_just_pressed("pause"):
 		is_paused = !is_paused
 		get_tree().paused = is_paused

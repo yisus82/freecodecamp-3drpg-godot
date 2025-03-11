@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd3ylfofkux46"]
+[gd_scene load_steps=5 format=3 uid="uid://bd3ylfofkux46"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/gui.gd" id="1_h45wc"]
+[ext_resource type="Texture2D" uid="uid://cjid80mokonss" path="res://Assets/ui_big_pieces.png" id="2_0vhce"]
 [ext_resource type="PackedScene" uid="uid://clkst6gjnpotr" path="res://Scenes/GUI/Inventory/inventory.tscn" id="2_8caqf"]
 [ext_resource type="PackedScene" uid="uid://c72fd4jvxq7g2" path="res://Scenes/GUI/profile.tscn" id="3_0bi5q"]
 
@@ -8,12 +9,19 @@
 process_mode = 3
 script = ExtResource("1_h45wc")
 
+[node name="HealthBarBackground" type="Sprite2D" parent="."]
+position = Vector2(53.5, 16)
+scale = Vector2(1.36486, 1)
+texture = ExtResource("2_0vhce")
+region_enabled = true
+region_rect = Rect2(258.567, 39.8666, 74.8749, 20.46)
+
 [node name="HealthBar" type="ProgressBar" parent="."]
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 136.0
-offset_bottom = 31.0
-value = 50.0
+offset_left = 16.0
+offset_top = 9.0
+offset_right = 90.0
+offset_bottom = 24.0
+value = 100.0
 show_percentage = false
 
 [node name="Container" type="Control" parent="."]

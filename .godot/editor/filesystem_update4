@@ -12,3 +12,5 @@ res://Scenes/GUI/Inventory/Resources/Default/default_body_armor.tres
 res://Scenes/GUI/Inventory/Resources/iron_sword.tres
 res://Scripts/GUI/Inventory/inventory_slot.gd
 res://Scripts/GUI/gui.gd
+res://Scripts/Player/player.gd
+res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd

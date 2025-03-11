@@ -43,9 +43,12 @@ func reset_values() -> void:
 	weapon_equipped = default_items[InventoryItemData.InventoryItemType.WEAPON]
 	body_equipped = default_items[InventoryItemData.InventoryItemType.BODY]
 
-func damage_player(amount: int) -> int:
-	player_health -= amount
-	return player_health
+func damage_player(amount: int) -> bool:
+	var damage_done := amount - player_defense
+	if damage_done > 0:
+		player_health -= damage_done
+		return true
+	return false
 
 func heal_player(amount: int) -> bool:
 	if player_health == player_max_health:

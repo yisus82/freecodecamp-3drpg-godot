@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 
+@onready var item_object_scene: PackedScene = preload("res://Scenes/Objects/item_object.tscn")
 @onready var state_controller = get_node("StateMachine")
 
 @export var player: CharacterBody3D
@@ -42,6 +43,12 @@ func _on_attack_player_detection_body_exited(body: Node3D) -> void:
 		state_controller.change_state("Run")
 
 func die() -> void:
+	var rng := randi_range(2, 3)
+	for i in range(rng):
+		var item_object := item_object_scene.instantiate()
+		item_object.position = global_position
+		get_node("../../Items").add_child(item_object)
+	GameManager.gain_exp(100)
 	queue_free()
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:

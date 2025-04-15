@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c72fd4jvxq7g2"]
 
-[ext_resource type="Script" path="res://Scripts/GUI/profile.gd" id="1_kqlby"]
+[ext_resource type="Script" uid="uid://cp787lwamy1yk" path="res://Scripts/GUI/profile.gd" id="1_kqlby"]
 
 [node name="Profile" type="Control"]
 process_mode = 3

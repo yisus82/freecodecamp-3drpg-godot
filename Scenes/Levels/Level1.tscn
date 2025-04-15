@@ -35,10 +35,18 @@ environment = SubResource("Environment_xyhu7")
 [node name="Player" parent="." instance=ExtResource("2_c406j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12611, 0)
 
-[node name="SkeletonWarrior" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_rfrmb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10)
-player = NodePath("../Player")
-
 [node name="GameOverOverlay" parent="." instance=ExtResource("4_cv2gw")]
 
 [node name="GUI" parent="." instance=ExtResource("5_x3l7b")]
+
+[node name="Monsters" type="Node3D" parent="."]
+
+[node name="SkeletonWarrior" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_rfrmb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10)
+player = NodePath("../../Player")
+
+[node name="Projectiles" type="Node3D" parent="."]
+
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="Items" type="Node3D" parent="."]

@@ -7,10 +7,10 @@ var default_items := {
 }
 
 var items := {
-	"Iron Sword": preload("res://Scenes/GUI/Inventory/resources/iron_sword.tres"),
-	"Long Sword": preload("res://Scenes/GUI/Inventory/resources/long_sword.tres"),
-	"Iron Armor": preload("res://Scenes/GUI/Inventory/resources/iron_armor.tres"),
-	"Small Potion": preload("res://Scenes/GUI/Inventory/resources/small_potion.tres"),
+	"Iron Sword": preload("res://Scenes/GUI/Inventory/Resources/iron_sword.tres"),
+	"Long Sword": preload("res://Scenes/GUI/Inventory/Resources/long_sword.tres"),
+	"Iron Armor": preload("res://Scenes/GUI/Inventory/Resources/iron_armor.tres"),
+	"Small Potion": preload("res://Scenes/GUI/Inventory/Resources/small_potion.tres"),
 }
 
 var player_health: int = 10
@@ -42,6 +42,14 @@ func reset_values() -> void:
 	gold = 100
 	weapon_equipped = default_items[InventoryItemData.InventoryItemType.WEAPON]
 	body_equipped = default_items[InventoryItemData.InventoryItemType.BODY]
+
+func gain_exp(amount: int) -> void:
+	current_exp += amount
+	while current_exp >= exp_to_next_level:
+		player_level += 1
+		current_exp -= exp_to_next_level
+		exp_to_next_level = round(exp_to_next_level * 1.3)
+		exp_to_next_level = int(exp_to_next_level * pow(1.2, player_level - 1))
 
 func damage_player(amount: int) -> bool:
 	var damage_done := amount - player_defense

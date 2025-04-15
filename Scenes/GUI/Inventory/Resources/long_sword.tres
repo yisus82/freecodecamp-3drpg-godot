@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://dts2vwrnpmdmm"]
 
-[ext_resource type="Script" path="res://Scripts/GUI/Inventory/inventory_item_data.gd" id="1_rit1b"]
+[ext_resource type="Script" uid="uid://dpdopwpxmof5e" path="res://Scripts/GUI/Inventory/inventory_item_data.gd" id="1_rit1b"]
 [ext_resource type="Texture2D" uid="uid://cp6aks3lnq0ye" path="res://Assets/16x16 RPG Item Pack/Item__04.png" id="2_57t65"]
 
 [resource]

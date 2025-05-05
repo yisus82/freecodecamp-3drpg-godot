@@ -13,6 +13,13 @@ var items := {
 	"Small Potion": preload("res://Scenes/GUI/Inventory/Resources/small_potion.tres"),
 }
 
+var item_prices := {
+	"Iron Sword": 40,
+	"Long Sword": 60,
+	"Iron Armor": 50,
+	"Small Potion": 10,
+}
+
 var player_health: int = 10
 var player_max_health: int = 10
 var player_damage: int = 2
@@ -23,6 +30,7 @@ var gold: int = 100
 var current_exp: int = 0
 var exp_to_next_level: int = 100
 var player_level: int = 1
+var shopping: bool = false
 
 
 func _ready() -> void:
@@ -65,3 +73,9 @@ func heal_player(amount: int) -> bool:
 	if player_health > player_max_health:
 		player_health = player_max_health
 	return true
+	
+func buy_item(iten_name: String, price: int) -> bool:
+	if price <= gold and iten_name in items.keys():
+		gold -= price
+		return true
+	return false

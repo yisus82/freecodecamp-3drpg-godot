@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://t20xcwlrk2aa"]
+
+[ext_resource type="Texture2D" uid="uid://ckfasjsi5krbd" path="res://Assets/16x16 RPG Item Pack/Item__00.png" id="1_63ws3"]
+[ext_resource type="Script" uid="uid://v5gfkkc1qstp" path="res://Scripts/GUI/Shop/shop.gd" id="1_lgoti"]
+
+[node name="Shop" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_lgoti")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1088.0
+offset_bottom = 576.0
+
+[node name="ShopItems" type="GridContainer" parent="."]
+offset_left = 672.0
+offset_top = 128.0
+offset_right = 1056.0
+offset_bottom = 448.0
+columns = 6
+
+[node name="ItemInfo" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItenName" type="Label" parent="ItemInfo"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 80.0
+offset_right = 576.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 40
+text = "Item Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemDescription" type="Label" parent="ItemInfo"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 368.0
+offset_right = 608.0
+offset_bottom = 480.0
+text = "This is an item description that is very long.
+Very, very long..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ItemPrice" type="Label" parent="ItemInfo"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 512.0
+offset_right = 448.0
+offset_bottom = 544.0
+text = "Price: 100"
+
+[node name="ItemSprite" type="Sprite2D" parent="ItemInfo"]
+position = Vector2(360, 256)
+scale = Vector2(13, 13)
+texture = ExtResource("1_63ws3")
+
+[node name="BuyButton" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 512.0
+offset_right = 704.0
+offset_bottom = 560.0
+text = "Buy"
+
+[node name="CloseButton" type="Button" parent="."]
+offset_left = 912.0
+offset_top = 512.0
+offset_right = 1072.0
+offset_bottom = 560.0
+text = "Close"
+
+[connection signal="pressed" from="BuyButton" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

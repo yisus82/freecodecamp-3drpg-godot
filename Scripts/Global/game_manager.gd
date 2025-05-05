@@ -55,6 +55,8 @@ func gain_exp(amount: int) -> void:
 	current_exp += amount
 	while current_exp >= exp_to_next_level:
 		player_level += 1
+		player_max_health = player_level * 10
+		player_health = player_max_health
 		current_exp -= exp_to_next_level
 		exp_to_next_level = round(exp_to_next_level * 1.3)
 		exp_to_next_level = int(exp_to_next_level * pow(1.2, player_level - 1))

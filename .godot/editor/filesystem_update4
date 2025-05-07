@@ -14,3 +14,11 @@ res://Scenes/NPCs/mage.tscn
 res://Scripts/NPCs/mage.gd
 res://Scripts/GUI/profile.gd
 res://Scenes/Objects/torch.tscn
+res://Scenes/Player/player.tscn
+res://Assets/VFX/Shaders/s_UpLevel.tres
+res://Assets/VFX/Shaders/s_simple1.tres
+res://Assets/VFX/Shaders/s_puff.tres
+res://Scripts/Player/player.gd
+res://Assets/VFX/Shaders/s_simple2.tres
+res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn
+res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd

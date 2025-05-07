@@ -1,6 +1,9 @@
 extends Node
 
 
+signal level_up
+
+
 var default_items := {
 	InventoryItemData.InventoryItemType.WEAPON: preload("res://Scenes/GUI/Inventory/Resources/Default/default_sword.tres"),
 	InventoryItemData.InventoryItemType.BODY: preload("res://Scenes/GUI/Inventory/Resources/Default/default_body_armor.tres"),
@@ -54,6 +57,7 @@ func reset_values() -> void:
 func gain_exp(amount: int) -> void:
 	current_exp += amount
 	while current_exp >= exp_to_next_level:
+		self.emit_signal("level_up")
 		player_level += 1
 		player_max_health = player_level * 10
 		player_health = player_max_health

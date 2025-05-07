@@ -39,6 +39,7 @@ var just_hit: bool
 
 func _ready() -> void:
 	direction = Vector3.BACK.rotated(Vector3.UP, cam_root_h.global_transform.basis.get_euler().y)
+	GameManager.level_up.connect(Callable(self, "level_up"))
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -75,15 +76,20 @@ func _physics_process(delta: float) -> void:
 								0, 
 								Input.get_action_strength("forward") - Input.get_action_strength("backward"))
 			direction = direction.rotated(Vector3.UP, h_rot).normalized()
-			if Input.is_action_pressed("sprint") and is_walking:
+			is_walking = true
+			if Input.is_action_pressed("sprint"):
 				movement_speed = run_speed
 				is_running = true
 			else:
 				movement_speed = walk_speed
-				is_walking = true
+				is_running = false
 		else:
 			is_walking = false
 			is_running = false
+		if is_running:
+			$VFX_Puff_Run.emitting = true
+		else:
+			$VFX_Puff_Run.emitting = false
 		if Input.is_action_pressed("aim"):
 			player_mesh.rotation.y = lerp_angle(player_mesh.rotation.y, cam_root_h.rotation.y, angular_acceleration * delta)
 		else:
@@ -119,10 +125,14 @@ func hit(amount: int) -> void:
 		else:
 			var tween = get_tree().create_tween()
 			tween.tween_property(self, "global_position", global_position - (direction / 1.5), 0.2)
+			
+func level_up() -> void:
+	$VFX_Level_Up/AnimationPlayer.play("init")
 
 func _on_damage_detector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("monster") and is_attacking:
 		body.hit(GameManager.player_damage)
+		$Knight/Rig/Skeleton3D/RightHandSlot/VFX_Hit/AnimationPlayer.play("hit")
 
 func _on_hit_timer_timeout() -> void:
 	just_hit = false

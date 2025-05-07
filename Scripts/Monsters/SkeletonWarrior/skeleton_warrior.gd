@@ -43,13 +43,14 @@ func _on_attack_player_detection_body_exited(body: Node3D) -> void:
 		state_controller.change_state("Run")
 
 func die() -> void:
+	$Skeleton_Warrior.hide()
+	$VFX_Die/AnimationPlayer.play("hit")
 	var rng := randi_range(2, 3)
 	for i in range(rng):
 		var item_object := item_object_scene.instantiate()
 		item_object.position = global_position
 		get_node("../../Items").add_child(item_object)
 	GameManager.gain_exp(100)
-	queue_free()
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if "Awake" in anim_name:
@@ -78,3 +79,7 @@ func _on_hit_timer_timeout() -> void:
 func _on_damage_detector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player") and is_attacking:
 		body.hit(damage)
+
+
+func _on_die_animation_player_animation_finished(anim_name: StringName) -> void:
+	queue_free()

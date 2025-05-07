@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://dn4bqlgs7kf0g"]
+[gd_scene load_steps=16 format=4 uid="uid://dn4bqlgs7kf0g"]
 
 [ext_resource type="Texture2D" uid="uid://bm18of170jk5t" path="res://Assets/KayKit_Adventurers_1.0_FREE/KayKit_Adventurers_1.0_FREE/Characters/gltf/Knight_knight_texture.png" id="1_fdmht"]
 [ext_resource type="Script" uid="uid://c3rfk0gl5bdh2" path="res://Scripts/Objects/item_object.gd" id="1_p7g0b"]
 [ext_resource type="Texture2D" uid="uid://dxl6onpxawe2y" path="res://Assets/KayKit_Adventurers_1.0_FREE/KayKit_Adventurers_1.0_FREE/Assets/fbx/knight_texture.png" id="2_7ww3o"]
 [ext_resource type="Texture2D" uid="uid://djhuhghxynafy" path="res://Assets/KayKit_Adventurers_1.0_FREE/KayKit_Adventurers_1.0_FREE/Assets/fbx/barbarian_texture.png" id="3_826ul"]
+[ext_resource type="AudioStream" uid="uid://c0om6jy32k1kb" path="res://Assets/Minifantasy_Dungeon_SFX/04_sack_open_1.wav" id="5_tqvx5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38dk1"]
 resource_name = "knight_texture"
@@ -263,4 +264,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.615489, 0)
 shape = SubResource("SphereShape3D_n1j8h")
 
+[node name="Pickup" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_tqvx5")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="Pickup" to="." method="_on_pickup_finished"]

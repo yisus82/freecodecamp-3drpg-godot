@@ -81,5 +81,5 @@ func _on_damage_detector_body_entered(body: Node3D) -> void:
 		body.hit(damage)
 
 
-func _on_die_animation_player_animation_finished(anim_name: StringName) -> void:
+func _on_die_animation_player_animation_finished(_anim_name: StringName) -> void:
 	queue_free()

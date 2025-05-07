@@ -116,6 +116,7 @@ func die() -> void:
 
 func hit(amount: int) -> void:
 	if !just_hit:
+		$Hit.play()
 		if GameManager.damage_player(amount):
 			just_hit = true
 			get_node("HitTimer").start()
@@ -133,6 +134,7 @@ func _on_damage_detector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("monster") and is_attacking:
 		body.hit(GameManager.player_damage)
 		$Knight/Rig/Skeleton3D/RightHandSlot/VFX_Hit/AnimationPlayer.play("hit")
+		$Damage.play()
 
 func _on_hit_timer_timeout() -> void:
 	just_hit = false

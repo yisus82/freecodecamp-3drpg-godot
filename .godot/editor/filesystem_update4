@@ -22,3 +22,5 @@ res://Scripts/Player/player.gd
 res://Assets/VFX/Shaders/s_simple2.tres
 res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn
 res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd
+res://Scripts/Objects/item_object.gd
+res://Scenes/Objects/item_object.tscn

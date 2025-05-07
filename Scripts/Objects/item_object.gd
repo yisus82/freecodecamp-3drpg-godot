@@ -25,6 +25,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
+		$Pickup.play()
 		match rng:
 			0: 
 				get_node("../../GUI/Container/Inventory").add_item("Iron Armor")
@@ -32,4 +33,7 @@ func _on_body_entered(body: Node3D) -> void:
 				get_node("../../GUI/Container/Inventory").add_item("Small Potion")
 			2: 
 				get_node("../../GUI/Container/Inventory").add_item("Iron Sword")
-		queue_free()
+		hide()
+
+func _on_pickup_finished() -> void:
+	queue_free()

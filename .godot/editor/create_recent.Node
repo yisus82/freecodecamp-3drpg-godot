@@ -1,3 +1,5 @@
+GPUParticles3D
+OmniLight3D
 Label
 Node3D
 CollisionShape3D
@@ -11,4 +13,3 @@ GridContainer
 CanvasLayer
 InventorySlot
 PanelContainer
-VBoxContainer

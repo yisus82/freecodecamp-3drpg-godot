@@ -13,3 +13,4 @@ res://Scenes/NPCs/Mage.tscn
 res://Scenes/NPCs/mage.tscn
 res://Scripts/NPCs/mage.gd
 res://Scripts/GUI/profile.gd
+res://Scenes/Objects/torch.tscn

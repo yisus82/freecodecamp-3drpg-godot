@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bh353a2ioskrm"]
+[gd_scene load_steps=11 format=3 uid="uid://bh353a2ioskrm"]
 
 [ext_resource type="MeshLibrary" uid="uid://c3stnl1idv2lh" path="res://Scenes/Levels/library.tres" id="1_n5qkr"]
 [ext_resource type="PackedScene" uid="uid://cckb1h5cc6kxo" path="res://Scenes/Player/player.tscn" id="2_c406j"]
 [ext_resource type="PackedScene" uid="uid://bfqc4ojpqubak" path="res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn" id="3_rfrmb"]
 [ext_resource type="PackedScene" uid="uid://f4115ubn0p6r" path="res://Scenes/GUI/game_over_overlay.tscn" id="4_cv2gw"]
 [ext_resource type="PackedScene" uid="uid://bd3ylfofkux46" path="res://Scenes/GUI/gui.tscn" id="5_x3l7b"]
+[ext_resource type="PackedScene" uid="uid://wxakd0mysd2" path="res://Scenes/Objects/torch.tscn" id="6_20uw2"]
 [ext_resource type="PackedScene" uid="uid://3qp1wx8ds6lh" path="res://Scenes/NPCs/mage.tscn" id="6_m0h5h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vrecm"]
@@ -18,6 +19,7 @@ background_color = Color(0.392157, 0.392157, 0.392157, 1)
 sky = SubResource("Sky_o8cdd")
 glow_enabled = true
 glow_normalized = true
+glow_intensity = 0.5
 glow_blend_mode = 0
 fog_enabled = true
 fog_light_energy = 0.1
@@ -70,6 +72,18 @@ player = NodePath("../../Player")
 [node name="Projectiles" type="Node3D" parent="."]
 
 [node name="Objects" type="Node3D" parent="."]
+
+[node name="Torch" parent="Objects" instance=ExtResource("6_20uw2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.5592, 0, 17.838)
+
+[node name="Torch2" parent="Objects" instance=ExtResource("6_20uw2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.527, 0.231243, 10.2418)
+
+[node name="Torch3" parent="Objects" instance=ExtResource("6_20uw2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.5065, 0, 13.838)
+
+[node name="Torch4" parent="Objects" instance=ExtResource("6_20uw2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.3634, 0, 6.838)
 
 [node name="Items" type="Node3D" parent="."]
 

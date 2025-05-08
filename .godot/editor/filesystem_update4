@@ -24,3 +24,4 @@ res://Scenes/Monsters/SkeletonWarrior/skeleton_warrior.tscn
 res://Scripts/Monsters/SkeletonWarrior/skeleton_warrior.gd
 res://Scripts/Objects/item_object.gd
 res://Scenes/Objects/item_object.tscn
+res://Scripts/Levels/level_1.gd
